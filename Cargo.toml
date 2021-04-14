@@ -16,12 +16,6 @@ autotests = false
 name = "arrange"
 path = "src/lib.rs"
 
-#[[bin]]
-#name = "suffix-array"
-#path = "src/main.rs"
-#test = false
-#bench = false
-#doc = false
 
 [[test]]
 name = "tests"
