@@ -1,6 +1,7 @@
 [package]
+publish = false
 name = "arrange"
-version = "0.1.1"
+version = "0.1.0"
 authors = ["cryptopatrick <cryptopatrick@gmail.com>"]
 edition = "2018"
 description = "Convenience functions for populating an array with values from a range."
@@ -10,29 +11,17 @@ repository = "https://github.com/cryptopatrick/arrange"
 readme = "README.md"
 keywords = ["arrange", "array", "range", "utility"]
 license = "Unlicense/MIT"
-autotests = false
+
 
 [lib]
 name = "arrange"
 path = "src/lib.rs"
-
-#[bin]
-#name = "arrange"
-#path = "src/main.rs"
 
 
 [[test]]
 name = "tests"
 path = "tests/tests.rs"
 
-#[[bench]]
-#name = "bench"
-#path = "tests/bench.rs"
-#
-#[profile.bench]
-#opt-level = 3
+[dependencies.arrange]
 
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
-[dependencies]
+[dev-dependencies.arrange]

@@ -1,13 +1,4 @@
-/// There are three fields that affect the range:
-/// start : the starting value of the range
-/// stop :  the stoping value of the range
-/// step :  the distance from one element in the range to the next
-///
-/// Please note that the step is unidirectional.
-/// we can only move inside the range implicitly
-/// set by the start and stop range:
-/// If start < stop, then the range is [start,stop).
-/// If stop < start, then the range is (stop,start].
+#[allow(dead_code)]
 ///
 #[derive(Debug)]
 pub struct IntRange {
@@ -26,23 +17,15 @@ impl IntRange {
         IntRange { start, stop, step }
     }
 
-    /// Returns the length of the arrange.
-    ///
-    /// TODO: handle steps that are diff than 1
     #[inline]
     pub fn len(&self) -> usize {
         (self.stop - self.start).abs() as usize
     }
 
-    /// Creates a range of Vec<i32> type.
-    ///
-    ///
     pub fn range(&self) -> Vec<i32> {
-        // Checking range inputs to verify that they can be used to generate a range
         if self.step == 0 {
             panic!("Range: step cannot be zero");
         }
-        // The start and stop value need to differ
         if self.start == self.stop {
             panic!("Range: start and stop cannot be the same");
         }
@@ -82,20 +65,13 @@ impl FloatRange {
         FloatRange { start, stop, step }
     }
 
-    /// Returns the length of the arrange.
-    ///
-    /// TODO: handle steps that are diff than 1
     #[inline]
     pub fn len(&self) -> usize {
         // (2.0-1.0)/0.2=5
         ((self.stop - self.start) / self.step).abs() as usize
     }
 
-    /// Creates a range of Vec<i32> type.
-    ///
-    ///
     pub fn range(&self) -> Vec<f64> {
-        // Checking range inputs to verify that they can be used to generate a range
         if self.step <= 0f64 {
             panic!("Range: step has to be a positive number");
         }
@@ -103,14 +79,8 @@ impl FloatRange {
             panic!("Range: start and stop cannot be the same");
         }
 
-        // vector is used to hold the range of values we generate based on the
-        // start, stop, step values passed.
         let mut vector: Vec<f64> = Vec::with_capacity(self.len());
 
-        // Two different loops are used to handle two different key situations
-        // 1. The start value is lower than the stop value.
-        // 2. The start value is higher than the stop value.
-        // (1) is supposed to be the more common pattern.
         if self.start < self.stop {
             // Decreasing ranges, e.g.: start=1 to stop=-10, by step=1
             let mut v: f64 = self.start;
@@ -130,9 +100,3 @@ impl FloatRange {
         vector
     }
 }
-/*
-fn main() {
-    let ir = IntRange::new(1, 10, 1).range();
-    assert_eq!(ir, &[1, 2, 3, 4, 5, 6, 7, 8, 9]);
-}
- */
