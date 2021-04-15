@@ -21,7 +21,7 @@ Add it to your `Cargo.toml` like so:
 
 ```toml
 [dependencies]
-arrange = "0.1.1"
+arrange = "0.1.2"
 ```
 
 ### Examples
