@@ -3,7 +3,7 @@ arrange
 Convenience functions for populating an array with values from a range.
 
 [![Build status](https://github.com/CryptoPatrick/arrange/workflows/ci/badge.svg)](https://github.com/CryptoPatrick/arrange/actions)
-[![](http://meritbadge.herokuapp.com/suffix)](https://crates.io/crates/suffix)
+[![](http://meritbadge.herokuapp.com/arrange)](https://crates.io/crates/arrange)
 
 Dual-licensed under MIT or the [UNLICENSE](http://unlicense.org).
 
@@ -21,7 +21,7 @@ Add it to your `Cargo.toml` like so:
 
 ```toml
 [dependencies]
-arrange = "0.1.2"
+arrange = "0.1.3"
 ```
 
 ### Examples

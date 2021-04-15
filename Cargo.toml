@@ -1,6 +1,6 @@
 [package]
 name = "arrange"
-version = "0.1.2"
+version = "0.1.3"
 authors = ["cryptopatrick <cryptopatrick@gmail.com>"]
 edition = "2018"
 description = "Convenience functions for populating an array with values from a range."
