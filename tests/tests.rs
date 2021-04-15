@@ -18,17 +18,9 @@ fn basic1() {
 #[test]
 fn basic2() {
     assert_eq!(IntRange::new(1, 10, 1).range(), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
-
-    /* start: 1
-        stop: 10
-    }) == [1, 2, 3, 4, 5, 6, 7, 8, 9]assert_eq!(	range.int({ start:1, stop: 10 }), [1, 2, 3, 4, 5, 6, 7, 8, 9]); */
 }
 
 #[test]
 fn basic3() {
     assert_eq!(IntRange::new(1, 10, 2).range(), [1, 3, 5, 7, 9]);
-    /* start: 1
-        stop: 10
-        step: 2
-    }) == [1, 3, 5, 7, 9] */
 }
