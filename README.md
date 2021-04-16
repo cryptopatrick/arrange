@@ -2,7 +2,7 @@ arrange
 ======
 Convenience functions for populating an array with values from a range.
 
-[![Build status](https://github.com/CryptoPatrick/arrange/workflows/ci/badge.svg)](https://github.com/CryptoPatrick/arrange/actions)
+[![Build status](https://github.com/cryptopatrick/arrange/workflows/ci/badge.svg)](https://github.com/cryptopatrick/arrange/actions)
 [![](http://meritbadge.herokuapp.com/arrange)](https://crates.io/crates/arrange)
 
 Dual-licensed under MIT or the [UNLICENSE](http://unlicense.org).
