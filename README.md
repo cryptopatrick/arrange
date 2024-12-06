@@ -1,47 +1,27 @@
-arrange
-======
-Convenience functions for populating an array with values from a range.
+# cargo-rush
 
-[![Build status](https://github.com/cryptopatrick/arrange/workflows/ci/badge.svg)](https://github.com/cryptopatrick/arrange/actions)
-[![](http://meritbadge.herokuapp.com/arrange)](https://crates.io/crates/arrange)
+When you're in a rush and don't feel like creating a rust file to test out 
+small snippets of simple Rust code - simply copy the Rust code to the operating system's clipboard, next, open a terminal and run `cargo rush`.
 
-Dual-licensed under MIT or the [UNLICENSE](http://unlicense.org).
+# Example
 
-
-### Documentation
-https://docs.rs/arrange
-
-
-### Installation
-
-This crate works with Cargo and is on
-[crates.io](https://crates.io/crates/arrange).  
-The package will be regularly updated.
-Add it to your `Cargo.toml` like so:
-
-```toml
-[dependencies]
-arrange = "0.1.3"
-```
-
-### Examples
-
-Usage is simple:
+### Step 1: Copy some Rust code to memory
+Let's say that we copy the lines below to the clipboard (operating system memory).
 
 ```rust
-extern crate arrange;
-
-use arrange::IntRange;
-
 fn main() {
-    assert_eq!(IntRange::new(1, 10, 1).range(), [1, 2, 3, 4, 5, 6, 7, 8, 9]);
+    let a = 1;
+    let b = 2;
+    println!("{} + {} = {}", a, b, a + b);
 }
 ```
 
-### Status of implementation
-Some may want to negative indexing but we won't implement that for the time
-being since they can be prone to bugs.
+### Step 2:
+In the terminal:
 
-Still a lot of work to do.
-
-Make sure to use version 0.1.1 or above.
+```shell
+cargo install cargo-rush
+cargo rush
+# The command will call `rustc` on whatever is in the clipboard:
+1 + 2 = 3
+```
